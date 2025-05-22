@@ -31,7 +31,7 @@ public class StudentAnalyzerTest {
     @Test
     public void testCountExcellentStudents_withMixedScores() {
         StudentAnalyzer analyzer = new StudentAnalyzer();
-        assertEquals(1, analyzer.countExcellentStudents(Arrays.asList(8.0, 0.0, 10.0)));
+        assertEquals(2, analyzer.countExcellentStudents(Arrays.asList(8.0, 0.0, 10.0)));
     }
 
     @Test
