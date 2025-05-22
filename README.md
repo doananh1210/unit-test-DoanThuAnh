@@ -2,8 +2,8 @@
 
 ## 1. Mô tả bài toán
 Viết chương trình Java với lớp StudentAnalyzer có 2 phương thức:
-    - `countExcellentStudents(List<Double> scores)`: đếm số học sinh điểm >= 8.0, bỏ qua điểm không hợp lệ (<0 hoặc >10).
-    - `calculateValidAverage(List<Double> scores)`: tính trung bình các điểm hợp lệ.
+- `countExcellentStudents(List<Double> scores)`: đếm số học sinh điểm >= 8.0, bỏ qua điểm không hợp lệ (<0 hoặc >10).
+- `calculateValidAverage(List<Double> scores)`: tính trung bình các điểm hợp lệ.
 
 ## 2. Cách clone project
 ```sh
