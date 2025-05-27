@@ -1,11 +1,8 @@
 package test;
-
 import org.junit.jupiter.api.Test;
 import src.StudentAnalyzer;
-
 import java.util.Arrays;
 import java.util.Collections;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class StudentAnalyzerTest {
@@ -56,5 +53,28 @@ public class StudentAnalyzerTest {
     public void testCalculateValidAverage_withMixedScores() {
         StudentAnalyzer analyzer = new StudentAnalyzer();
         assertEquals(6.0, analyzer.calculateValidAverage(Arrays.asList(8.0, 0.0, 10.0)), 0.01);
+    }
+    @Test
+
+    public void testCountExcellentStudents_withNullList() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        assertEquals(0, analyzer.countExcellentStudents(null));
+    }
+    @Test
+    public void testCalculateValidAverage_withNullList() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        assertEquals(0.0, analyzer.calculateValidAverage(null));
+    }
+
+    @Test
+    public void testCalculateValidAverage_withOnlyNulls() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        assertEquals(0.0, analyzer.calculateValidAverage(Arrays.asList(null, null)));
+    }
+
+    @Test
+    public void testCountExcellentStudents_withNullElement() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        assertEquals(1, analyzer.countExcellentStudents(Arrays.asList(9.0, null, 7.0)));
     }
 }
